@@ -2,6 +2,15 @@ package com.xgb.org.domain;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * Admin
+ * <p>Title: Admin 系统管理员类</p>
+ * <p>Description: </p>
+ *  	
+ * @author XuGongBin
+ * @version 1.0.0
+ * @date 2018/8/18 10:10
+ */
 @Component
 public class Admin {
 
@@ -12,6 +21,10 @@ public class Admin {
 	private String password;//密码
 	
 	private String descM;//描述
+	
+	private String roleId;//角色id
+
+	private SystemRole role;//所属角色 
 
 	public String getId() {
 		return id;
@@ -45,25 +58,51 @@ public class Admin {
 		this.descM = descM;
 	}
 
-	
+	public String getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(String roleId) {
+		this.roleId = roleId;
+	}
+
+	public SystemRole getRole() {
+		return role;
+	}
+
+	public void setRole(SystemRole role) {
+		this.role = role;
+	}
+
 	public Admin() {
 		super();
 	}
+	
 
-	public Admin(String id, String name, String password, String descM) {
+	public Admin(String id, String name, String password, String descM, String roleId) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.password = password;
 		this.descM = descM;
+		this.roleId = roleId;
+	}
+
+	public Admin(String id, String name, String password, String descM, String roleId, SystemRole role) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.descM = descM;
+		this.roleId = roleId;
+		this.role = role;
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + ", descM=" + descM + "]";
+		return "Admin [id=" + id + ", name=" + name + ", password=" + password + ", descM=" + descM + ", roleId="
+				+ roleId + ", role=" + role + "]";
 	}
-	
-	
 	
 	
 }
