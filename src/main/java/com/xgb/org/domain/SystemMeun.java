@@ -34,6 +34,8 @@ public class SystemMeun {
 	
 	private String parentId;//父id
 	
+	private String icon;//图标
+	
 	private List<SystemMeun> childrens; //子菜单
 
 	public String getId() {
@@ -108,6 +110,14 @@ public class SystemMeun {
 		this.parentId = parentId;
 	}
 
+	public String getIcon() {
+		return icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+
 	public List<SystemMeun> getChildrens() {
 		return childrens;
 	}
@@ -121,7 +131,7 @@ public class SystemMeun {
 	}
 
 	public SystemMeun(String id, String name, String url, String descM, String createTime, String updateTime,
-			int statuses, int sort, String parentId, List<SystemMeun> childrens) {
+			int statuses, int sort, String parentId, String icon) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -132,6 +142,22 @@ public class SystemMeun {
 		this.statuses = statuses;
 		this.sort = sort;
 		this.parentId = parentId;
+		this.icon = icon;
+	}
+
+	public SystemMeun(String id, String name, String url, String descM, String createTime, String updateTime,
+			int statuses, int sort, String parentId, String icon, List<SystemMeun> childrens) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.url = url;
+		this.descM = descM;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+		this.statuses = statuses;
+		this.sort = sort;
+		this.parentId = parentId;
+		this.icon = icon;
 		this.childrens = childrens;
 	}
 
@@ -139,8 +165,9 @@ public class SystemMeun {
 	public String toString() {
 		return "SystemMeun [id=" + id + ", name=" + name + ", url=" + url + ", descM=" + descM + ", createTime="
 				+ createTime + ", updateTime=" + updateTime + ", statuses=" + statuses + ", sort=" + sort
-				+ ", parentId=" + parentId + ", childrens=" + childrens + "]";
+				+ ", parentId=" + parentId + ", icon=" + icon + ", childrens=" + childrens + "]";
 	}
+
 	
 	
 }

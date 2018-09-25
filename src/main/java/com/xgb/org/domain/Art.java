@@ -32,6 +32,10 @@ public class Art {
 	private int views;//浏览量
 	
 	private int statuses;//状态
+	
+	private String adminId;//作者id
+
+	private Admin admin;//作者
 
 	public String getId() {
 		return id;
@@ -137,12 +141,29 @@ public class Art {
 		this.statuses = statuses;
 	}
 
+	public String getAdminId() {
+		return adminId;
+	}
+
+	public void setAdminId(String adminId) {
+		this.adminId = adminId;
+	}
+
+	public Admin getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(Admin admin) {
+		this.admin = admin;
+	}
+
 	public Art() {
 		super();
 	}
 
 	public Art(String id, String title, String image, String descM, String content, String typese, List<Label> labels,
-			Integer isResouce, String url, String createTime, String updateTime, int views, int statuses) {
+			Integer isResouce, String url, String createTime, String updateTime, int views, int statuses,
+			String adminId) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -157,6 +178,28 @@ public class Art {
 		this.updateTime = updateTime;
 		this.views = views;
 		this.statuses = statuses;
+		this.adminId = adminId;
+	}
+
+	public Art(String id, String title, String image, String descM, String content, String typese, List<Label> labels,
+			Integer isResouce, String url, String createTime, String updateTime, int views, int statuses,
+			String adminId, Admin admin) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.image = image;
+		this.descM = descM;
+		this.content = content;
+		this.typese = typese;
+		this.labels = labels;
+		this.isResouce = isResouce;
+		this.url = url;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+		this.views = views;
+		this.statuses = statuses;
+		this.adminId = adminId;
+		this.admin = admin;
 	}
 
 	@Override
@@ -164,9 +207,8 @@ public class Art {
 		return "Art [id=" + id + ", title=" + title + ", image=" + image + ", descM=" + descM + ", content=" + content
 				+ ", typese=" + typese + ", labels=" + labels + ", isResouce=" + isResouce + ", url=" + url
 				+ ", createTime=" + createTime + ", updateTime=" + updateTime + ", views=" + views + ", statuses="
-				+ statuses + "]";
+				+ statuses + ", adminId=" + adminId + ", admin=" + admin + "]";
 	}
-
 	
 	
 }

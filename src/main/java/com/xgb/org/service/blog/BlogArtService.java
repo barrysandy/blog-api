@@ -22,4 +22,6 @@ public interface BlogArtService {
 	
 	Art getTheNextBeanService(String time) throws Exception;
 	
+	List<Art> getRandomByTypesService(int size,String typese) throws Exception;
+	
 }

@@ -21,6 +21,8 @@ public class Material {
 	
 	private String updateTime;//修改时间
 
+	private String materialId;//materialId资源id 全局唯一的8位数自动增加
+
 	public String getId() {
 		return id;
 	}
@@ -85,10 +87,19 @@ public class Material {
 		this.updateTime = updateTime;
 	}
 
+	public String getMaterialId() {
+		return materialId;
+	}
+
+	public void setMaterialId(String materialId) {
+		this.materialId = materialId;
+	}
+
 	public Material() {
 		super();
 	}
 
+	
 	public Material(String id, String name, String url, String diskPath, String type, int status, String createTime,
 			String updateTime) {
 		super();
@@ -102,12 +113,27 @@ public class Material {
 		this.updateTime = updateTime;
 	}
 
+	public Material(String id, String name, String url, String diskPath, String type, int status, String createTime,
+			String updateTime, String materialId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.url = url;
+		this.diskPath = diskPath;
+		this.type = type;
+		this.status = status;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+		this.materialId = materialId;
+	}
+
 	@Override
 	public String toString() {
 		return "Material [id=" + id + ", name=" + name + ", url=" + url + ", diskPath=" + diskPath + ", type=" + type
-				+ ", status=" + status + ", createTime=" + createTime + ", updateTime=" + updateTime + "]";
+				+ ", status=" + status + ", createTime=" + createTime + ", updateTime=" + updateTime + ", materialId="
+				+ materialId + "]";
 	}
-
-
+	
+	
 	
 }
