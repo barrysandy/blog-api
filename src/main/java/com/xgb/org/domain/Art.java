@@ -4,7 +4,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Art {
+public class Art implements Comparable<Art>{
 
 	private String id;//id
 	
@@ -209,6 +209,12 @@ public class Art {
 				+ ", createTime=" + createTime + ", updateTime=" + updateTime + ", views=" + views + ", statuses="
 				+ statuses + ", adminId=" + adminId + ", admin=" + admin + "]";
 	}
+	
+	@Override
+	public int compareTo(Art obj) {
+		return this.views - obj.views;
+	}
+	
 	
 	
 }

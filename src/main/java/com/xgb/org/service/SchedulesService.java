@@ -3,6 +3,7 @@ package com.xgb.org.service;
 import java.util.List;
 
 import com.xgb.org.domain.Schedules;
+import com.xgb.org.vo.VSchedules;
 
 public interface SchedulesService {
 
@@ -23,7 +24,7 @@ public interface SchedulesService {
 	 * @return 返回排期集合
 	 * @throws Exception
 	 */
-	List<Schedules> getListService(String beginTime,String endTime,String typese,String adminId) throws Exception;
+	List<VSchedules> getListService(String beginTime,String endTime,String typese,String adminId) throws Exception;
 	
 	/**
 	 * 统计排期数量
@@ -35,4 +36,15 @@ public interface SchedulesService {
 	 * @throws Exception
 	 */
 	int getCountService(String beginTime,String endTime,String typese,String adminId) throws Exception;
+	
+	
+	/**
+	 * 按照开始和结束时间以及类型查询排期集合
+	 * @param beginTime
+	 * @param endTime
+	 * @param typese
+	 * @return 返回排期集合
+	 * @throws Exception
+	 */
+	List<Schedules> getListCurrentHourService(String beginTime,String endTime,String typese) throws Exception;
 }

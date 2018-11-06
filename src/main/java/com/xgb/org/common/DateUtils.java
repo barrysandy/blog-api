@@ -335,5 +335,55 @@ public class DateUtils {
 		}
 		return null;
 	}
+	
+	/** 
+	 * 得到指定月的天数 
+	 * */  
+	public static int getMonthLastDay(int year, int month)  
+	{
+	    Calendar a = Calendar.getInstance();
+	    a.set(Calendar.YEAR, year);
+	    a.set(Calendar.MONTH, month - 1);
+	    a.set(Calendar.DATE, 1);//把日期设置为当月第一天
+	    a.roll(Calendar.DATE, -1);//日期回滚一天，也就是最后一天
+	    int maxDate = a.get(Calendar.DATE);
+	    return maxDate;
+	}
+	
+	/**
+	 * 获取当月的第一天
+	 * @return
+	 */
+	public static String getBeginTime(){
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		int year = calendar.get(Calendar.YEAR);//获取年份
+        int month = calendar.get(Calendar.MONTH) + 1;//获取月份
+        DateUtils.getMonthLastDay(year, month);
+        String monthStr = String.valueOf(month);
+        if(month <= 10) {
+        	monthStr = "0" + monthStr;
+        }
+        return year + "-" + monthStr + "-01";
+	}
+	
+	/**
+	 * 获取当月的最后一天
+	 * @return
+	 */
+	public static String getEndTime(){
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		int year = calendar.get(Calendar.YEAR);//获取年份
+        int month = calendar.get(Calendar.MONTH) + 1;//获取月份
+        DateUtils.getMonthLastDay(year, month);
+        String monthStr = String.valueOf(month);
+        int lastDay = getMonthLastDay(year, month);
+        if(month <= 10) {
+        	monthStr = "0" + monthStr;
+        }
+        return year + "-" + monthStr + "-" + lastDay;
+	}
+	
 
 }

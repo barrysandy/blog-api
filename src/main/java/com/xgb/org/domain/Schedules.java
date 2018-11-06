@@ -120,6 +120,23 @@ public class Schedules {
 	public Schedules() {
 		super();
 	}
+	
+	
+
+	public Schedules(Integer id, String title, String typese, Integer sendEmail, Integer sendMessage, String runTime,
+			String createTime, String updateTime, int statuses, String adminId) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.typese = typese;
+		this.sendEmail = sendEmail;
+		this.sendMessage = sendMessage;
+		this.runTime = runTime;
+		this.createTime = createTime;
+		this.updateTime = updateTime;
+		this.statuses = statuses;
+		this.adminId = adminId;
+	}
 
 	public Schedules(Integer id, String title, String typese, Integer sendEmail, Integer sendMessage, String runTime,
 			String createTime, String updateTime, int statuses, String adminId, Admin admin) {
