@@ -1,7 +1,11 @@
 package com.xgb.org.common;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * StringUtils
@@ -115,5 +119,6 @@ public class StringUtils {
 		}
 		return randBuffer.toString();
 	}
+	
 	
 }
