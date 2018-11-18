@@ -120,5 +120,20 @@ public class StringUtils {
 		return randBuffer.toString();
 	}
 	
+	/**
+	 * 从一段字符串中获取其中的图片路径
+	 * @param text
+	 * @return 获得图片字符集合
+	 */
+	public static List<String> getListImg(String text) {
+		String regex = "\"(.*?)\"";
+		List<String> list = new ArrayList<String>();
+		Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
+		Matcher matcher = pattern.matcher(text);
+		while (matcher.find()) {
+			list.add(matcher.group());
+		}
+		return list;
+	}
 	
 }
