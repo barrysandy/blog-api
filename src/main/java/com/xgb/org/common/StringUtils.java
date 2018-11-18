@@ -1,7 +1,11 @@
 package com.xgb.org.common;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * StringUtils
@@ -114,6 +118,22 @@ public class StringUtils {
 			scopeStr = scopeStr.replace(String.valueOf(scopeStr.charAt(num)), "");
 		}
 		return randBuffer.toString();
+	}
+	
+	/**
+	 * 从一段字符串中获取其中的图片路径
+	 * @param text
+	 * @return 获得图片字符集合
+	 */
+	public static List<String> getListImg(String text) {
+		String regex = "\"(.*?)\"";
+		List<String> list = new ArrayList<String>();
+		Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
+		Matcher matcher = pattern.matcher(text);
+		while (matcher.find()) {
+			list.add(matcher.group());
+		}
+		return list;
 	}
 	
 }
