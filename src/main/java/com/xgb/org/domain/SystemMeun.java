@@ -1,5 +1,6 @@
 package com.xgb.org.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -14,7 +15,12 @@ import org.springframework.stereotype.Component;
  * @date 2018/8/25 14:10
  */
 @Component
-public class SystemMeun {
+public class SystemMeun implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1958151821199434680L;
 
 	private String id;//id
 	

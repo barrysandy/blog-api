@@ -1,5 +1,7 @@
 package com.xgb.org.domain;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,7 +14,12 @@ import org.springframework.stereotype.Component;
  * @date 2018/8/18 10:10
  */
 @Component
-public class Admin {
+public class Admin implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5229764904579314556L;
 
 	private String id;//id
 	

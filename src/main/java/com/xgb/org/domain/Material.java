@@ -1,9 +1,16 @@
 package com.xgb.org.domain;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 @Component
-public class Material {
+public class Material implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8228988535720041708L;
 
 	private String id;//id
 	

@@ -1,11 +1,18 @@
 package com.xgb.org.domain;
 
+import java.io.Serializable;
+
 /**
  * 排期类
  * @author Mr.Xu
  *
  */
-public class Schedules {
+public class Schedules implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4142239595836084516L;
 
 	private Integer id;//id
 	

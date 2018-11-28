@@ -1,10 +1,16 @@
 package com.xgb.org.domain;
 
+import java.io.Serializable;
 import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Art implements Comparable<Art>{
+public class Art implements Comparable<Art>,Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4453144599589840042L;
 
 	private String id;//id
 	

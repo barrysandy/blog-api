@@ -1,8 +1,15 @@
 package com.xgb.org.domain;
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 @Component
-public class Label {
+public class Label  implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3530708884217311944L;
 
 	private String id;//id
 	
