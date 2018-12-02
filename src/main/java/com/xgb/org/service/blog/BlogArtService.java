@@ -8,7 +8,7 @@ public interface BlogArtService {
 
 	Art getBeanByIdService(String id) throws Exception;
 	
-	List<Art> getListService(int index,int pageSize,String search,String typese,int sort) throws Exception;
+	List<Art> getListService(int index,int pageSize,String search,String typese,int sort,int statuses) throws Exception;
 	
 	int getCountService(String search,String typese) throws Exception;
 	

@@ -167,6 +167,23 @@ public class Art implements Comparable<Art>,Serializable{
 		super();
 	}
 
+	/**
+	 * 
+	 * @param id
+	 * @param title
+	 * @param image
+	 * @param descM
+	 * @param content
+	 * @param typese
+	 * @param labels
+	 * @param isResouce
+	 * @param url
+	 * @param createTime
+	 * @param updateTime
+	 * @param views
+	 * @param statuses
+	 * @param adminId
+	 */
 	public Art(String id, String title, String image, String descM, String content, String typese, List<Label> labels,
 			Integer isResouce, String url, String createTime, String updateTime, int views, int statuses,
 			String adminId) {
